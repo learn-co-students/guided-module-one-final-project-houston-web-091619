@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 3) do
 
   create_table "requesters", force: :cascade do |t|
     t.string "name"
+    t.string "password"
     t.string "village"
   end
 
