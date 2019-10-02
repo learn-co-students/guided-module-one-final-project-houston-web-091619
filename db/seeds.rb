@@ -1,8 +1,5 @@
 Ninja.destroy_all
 Requester.destroy_all
-<<<<<<< HEAD
-Mission.destroy_all
-=======
 Mission.destroy_all
 
 
@@ -26,7 +23,7 @@ Mission.destroy_all
 
  sasori = Ninja.create({
     name: 'Sasori', 
-    clan: nil, 
+    clan: "", 
     village: 'Sunagakure', 
     rank: 'Kage',
     status: 'Death'
@@ -52,36 +49,34 @@ Mission.destroy_all
 
 
 ichigo = Requester.create({
-    name: 'Ichigo Kurosaki', 
-    password: nil,
+    name: 'Ichigo Kurosaki',
     village: 'Sunagakure', 
     funds: 500
  })
 
  orihime = Requester.create({
     name: 'Orihime Inoue', 
-    password: nil,
     village: 'Konohagakure', 
     funds: 5000
  })
 
  renji = Requester.create({
     name: 'Renji Abarai', 
-    password: nil,
+    password: "",
     village: 'Otogakure', 
     funds: 700
  })
 
  rukia = Requester.create({
     name: 'Rukia Kuchiki', 
-    password: nil,
+    password: "",
     village: 'Konohagakure', 
     funds: 2000
  })
 
  uryu = Requester.create({
     name: 'Uryū Ishida', 
-    password: nil, 
+    password: "", 
     village: 'Otogakure', 
     funds: 3000
  })
@@ -90,8 +85,8 @@ ichigo = Requester.create({
 
 
 clash = Mission.create({
-    title: 'Operation Clash Of Titans'
-    class: 'S', 
+    title: 'Operation Clash Of Titans',
+    tier: 'S', 
     cost: 900, 
     status: 'Completed', 
     ninja_id: dan.id, 
@@ -99,8 +94,8 @@ clash = Mission.create({
  })
 
  full = Mission.create({
-    title: 'Operation Full Moon'
-    class: 'A', 
+    title: 'Operation Full Moon',
+    tier: 'A', 
     cost: 600, 
     status: 'Ongoing', 
     ninja_id: kakashi.id, 
@@ -108,8 +103,8 @@ clash = Mission.create({
  })
 
  werewolf = Mission.create({
-    title: 'Operation Werewolf'
-    class: 'C', 
+    title: 'Operation Werewolf',
+    tier: 'C', 
     cost: 300, 
     status: 'Ongoing', 
     ninja_id: sasori.id, 
@@ -117,8 +112,8 @@ clash = Mission.create({
  })
 
  octagon = Mission.create({
-    title: 'Operation Octagon'
-    class: 'B', 
+    title: 'Operation Octagon',
+    tier: 'B', 
     cost: 400, 
     status: 'Completed', 
     ninja_id: danzo.id, 
@@ -126,11 +121,10 @@ clash = Mission.create({
  })
 
  bronze = Mission.create({
-    title: 'Operation Bronze Nightmare'
-    class: 'S', 
+    title: 'Operation Bronze Nightmare',
+    tier: 'S', 
     cost: 800, 
     status: 'Pending', 
     ninja_id: kakashi.id, 
     requester_id: uryu.id
  })
->>>>>>> 4df4ef70ff9da18aa9f4ce274d0d209e8413bcbb

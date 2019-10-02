@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 3) do
 
   create_table "missions", force: :cascade do |t|
     t.string "title"
-    t.string "class"
+    t.string "tier"
     t.integer "cost"
     t.string "status"
     t.integer "ninja_id"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 3) do
     t.string "name"
     t.string "password"
     t.string "village"
+    t.integer "funds"
   end
 
 end
