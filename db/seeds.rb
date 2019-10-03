@@ -47,36 +47,44 @@ Mission.destroy_all
 
 # Requester
 
+admin = Requester.create({
+    name: 'admin',
+    password: "admin",
+    village: 'Sunagakure', 
+    funds: 5000
+ })
 
 ichigo = Requester.create({
     name: 'Ichigo Kurosaki',
+    password: "admin",
     village: 'Sunagakure', 
     funds: 500
  })
 
  orihime = Requester.create({
     name: 'Orihime Inoue', 
-    village: 'Konohagakure', 
+    password: "admin",
+    village: 'Konohagakure',
     funds: 5000
  })
 
  renji = Requester.create({
     name: 'Renji Abarai', 
-    password: "",
-    village: 'Otogakure', 
+    password: "admin",
+    village: 'Otogakure',
     funds: 700
  })
 
  rukia = Requester.create({
     name: 'Rukia Kuchiki', 
-    password: "",
-    village: 'Konohagakure', 
+    password: "admin",
+    village: 'Konohagakure',
     funds: 2000
  })
 
  uryu = Requester.create({
     name: 'Uryū Ishida', 
-    password: "", 
+    password: "admin", 
     village: 'Otogakure', 
     funds: 3000
  })

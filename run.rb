@@ -53,6 +53,8 @@ while current_requester == nil
     end
 end
 
+
+
 while
     requesters_response = prompt.select("Choose The Right Path: ",[
         "Create A Mission!",
@@ -97,7 +99,15 @@ while
             tier = "S"
             cost = 500
             p "The cost for this mission is $#{cost}"
+            
+            
+          
         end
+
+        req = Requester.find_by(id: current_requester.id)
+            new_value = req.funds - cost
+            req.update(funds: new_value) 
+
         
         status = "Pending"
 
@@ -110,6 +120,12 @@ while
 
         ninja_id = prompt.select("Choose a Ninja!", ninjas_hash)
 
+        # req = Requester.find_by(id: current_requester.id)
+        # # req = Requester.find(current_requester.id) # the object
+        # new_value = req.funds - cost
+        # req.update(funds: new_value) 
+
+
         current_requester = Mission.create({
             title: title,
             tier: tier,
@@ -118,6 +134,7 @@ while
             ninja_id: ninja_id,
             requester_id: current_requester.id
         })
+
 
         # I was trying to substract the cost of the mission after it's created from the requester's fund
         # Requester.requesters.funds - cost 
